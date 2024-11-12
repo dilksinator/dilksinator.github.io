@@ -2,6 +2,7 @@
 <html>
 <head>
   <script>
+    // Fetch JSON data for cards
     fetch("resources/cards.json")
       .then((res) => {
         if (!res.ok) {
@@ -14,9 +15,11 @@
         console.log(data))
       .catch((error) =>
         console.error("Unable to fetch data:", error));
+    // Insert JSON content into page
+    document.getElementById("card").innerHTML = "Test";
   </script>
 </head>
-<body>
+<body id="card">
   Hello World
 </body>
 </html>
