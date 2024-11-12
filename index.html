@@ -1,6 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+  <script>
+    fetch("resources/cards.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error
+            (`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) =>
+        console.log(data))
+      .catch((error) =>
+        console.error("Unable to fetch data:", error));
+  </script>
 </head>
 <body>
   Hello World
