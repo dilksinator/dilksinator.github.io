@@ -1,12 +1,12 @@
 [
   {
     "name": "The Fool",
-    "image": "the_fool.png",
+    "image": "the_fool.jpg",
     "description": "The Fool represents new beginnings, having faith in the future, being inexperienced, not knowing what to expect, having beginner's luck, improvisation and believing in the universe."
   },
   {
     "name": "The Magician",
-    "image": "the_magician.png",
+    "image": "the_magician.jpg",
     "description": "The Magician card symbolizes manifestation, resourcefulness, power, and inspired action."
   }
 ]
