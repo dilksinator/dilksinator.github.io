@@ -25,3 +25,7 @@ div.scrollmenu a:hover {
 .container {
   width: max-content;
 }
+
+.wrap {
+  text-wrap: wrap;
+}
