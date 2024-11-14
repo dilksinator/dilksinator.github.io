@@ -5,6 +5,7 @@ div.scrollmenu {
   display: flex;
   width:100px;
   height:100%;
+  left: 50%;
 }
 
 .img-responsive {
