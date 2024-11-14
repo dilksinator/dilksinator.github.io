@@ -3,12 +3,12 @@ div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
   display: flex;
-  height:100%;
+  height:200px;
+  width:auto;
 }
 
 .img-responsive {
-  height:max-content;
-  width:auto;
+
 }
 
 .container {
