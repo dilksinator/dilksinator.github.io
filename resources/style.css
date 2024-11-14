@@ -4,6 +4,7 @@ div.scrollmenu {
   white-space: nowrap;
   display: flex;
   width:500px;
+  height:100%;
 }
 
 div.scrollmenu a {
@@ -19,7 +20,7 @@ div.scrollmenu a:hover {
 }
 
 .img-responsive {
-  height: auto;
+  height:100%;
   width:500px;
 }
 
