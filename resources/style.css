@@ -20,6 +20,7 @@ div.scrollmenu a:hover {
 
 .img-responsive {
   height: auto;
+  width:500px;
 }
 
 .container {
