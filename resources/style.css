@@ -5,10 +5,12 @@ div.scrollmenu {
   display: flex;
   height:200px;
   width:auto;
+  scroll-snap-type: y mandatory;
 }
 
 .img-responsive {
   width:50%;
+  scroll-snap-align: start;
 }
 
 .container {
