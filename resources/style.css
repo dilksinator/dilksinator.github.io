@@ -9,7 +9,6 @@ div.scrollmenu {
 }
 
 .img-responsive {
-  width:50%;
   scroll-snap-align: start;
 }
 
