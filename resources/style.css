@@ -7,21 +7,9 @@ div.scrollmenu {
   height:100%;
 }
 
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-div.scrollmenu a:hover {
-  background-color: #777;
-}
-
 .img-responsive {
-  height:100%;
-  width:500px;
+  height:50%;
+  width:50%;
 }
 
 .container {
