@@ -4,12 +4,11 @@ div.scrollmenu {
   white-space: nowrap;
   display: flex;
   height:100%;
-  left: 50%;
 }
 
 .img-responsive {
-  height:50%;
-  width:50%;
+  height:100%;
+  width:100%;
 }
 
 .container {
