@@ -4,7 +4,7 @@ div.scrollmenu {
   white-space: nowrap;
   display: flex;
   width:500px;
-  height:auto;
+  height:100%;
   scroll-snap-type: y mandatory;
 }
 
