@@ -3,6 +3,7 @@ div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
   display: flex;
+  width:50px;
 }
 
 div.scrollmenu a {
