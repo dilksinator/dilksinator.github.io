@@ -3,8 +3,8 @@ div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
   display: flex;
-  height:200px;
-  width:auto;
+  height:auto;
+  width:200px;
   scroll-snap-type: y mandatory;
 }
 
