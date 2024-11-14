@@ -5,7 +5,7 @@
 </head>
 <body>
   <div class="scrollmenu">
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
+    <input type="image" class="img-responsive" src="resources/the_fool.jpg" onclick="cardInfo();" />
     <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
     <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
     <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
@@ -21,10 +21,14 @@
     <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
     <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
     <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-
+  </div>
+  <div id="card-info">
   </div>
 </body>
   <script>
     //document.getElementById("card").innerHTML = "Test";
+    function cardInfo() {
+      document.getElementById("card-info").innerHTML = "Test";
+    }
   </script>
 </html>
