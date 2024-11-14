@@ -7,8 +7,8 @@ div.scrollmenu {
 }
 
 .img-responsive {
-  height:100%;
-  width:100%;
+  height:max-content;
+  width:auto;
 }
 
 .container {
