@@ -28,8 +28,17 @@
   <script>
     //document.getElementById("card").innerHTML = "Test";
     const scrollmenu = document.querySelector(".scrollmenu");
+    const images = document.querySelector(".img-responsive");
     scrollmenu.addEventListener("scroll", () => {
-      document.getElementById("card-info").innerHTML = scrollmenu.scrollLeft;
+      const scrollPos = scrollmenu.scrollLeft;
+      var sum = 0;
+      images.forEach((image) => {
+        sum += image.width;
+        if (sum > scrollPos) {
+          scrollMenu.style.width = image.width;
+          break;
+        }
+      });
     });
     
     function cardInfo() {
