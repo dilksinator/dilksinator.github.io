@@ -27,6 +27,11 @@
 </body>
   <script>
     //document.getElementById("card").innerHTML = "Test";
+    const scrollmenu = document.querySelector(".scrollmenu");
+    scrollmenu.addEventListener("scroll", () => {
+      document.getElementById("card-info").innerHTML = document.scrollmenu.scrollLeft;
+    });
+    
     function cardInfo() {
       document.getElementById("card-info").innerHTML = document.scrollmenu.scrollLeft;
     }
