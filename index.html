@@ -33,9 +33,9 @@
       const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
       images.forEach((image) => {
-        sum += image.width;
+        sum += image.naturalWidth;
         if (sum > scrollPos) {
-          scrollMenu.style.width = image.width;
+          scrollMenu.style.width = image.naturalWidth;
           break;
         }
       });
