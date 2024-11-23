@@ -5,9 +5,8 @@ div.scrollmenu {
   display: flex;
   width:500px;
   height:500px;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(300px);
-  scroll-snap-type: y mandatory;
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: x mandatory;
   margin: auto;
 }
 
