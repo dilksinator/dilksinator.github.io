@@ -29,7 +29,7 @@
     //document.getElementById("card").innerHTML = "Test";
     const scrollmenu = document.querySelector(".scrollmenu");
     scrollmenu.addEventListener("scroll", () => {
-      document.getElementById("card-info").innerHTML = "Test";
+      document.getElementById("card-info").innerHTML = scrollmenu.scrollLeft;
     });
     
     function cardInfo() {
