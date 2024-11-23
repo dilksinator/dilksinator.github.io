@@ -30,13 +30,12 @@
     const scrollmenu = document.querySelector(".scrollmenu");
     const images = document.querySelectorAll(".img-responsive");
     scrollmenu.addEventListener("scroll", () => {
-      const scrollPos = scrollmenu.scrollLeft;
+      const scrollPos = scrollmenu.scrollRight;
       var sum = 0;
       images.forEach((image) => {
         sum += image.naturalWidth;
-        if (sum > scrollPos) {
+        if (sum < scrollPos) {
           scrollMenu.style.width = image.naturalWidth;
-          break;
         }
       });
       document.getElementById("card-info").innerHTML = sum;
