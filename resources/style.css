@@ -5,7 +5,6 @@ div.scrollmenu {
   display: flex;
   width:500px;
   height:500px;
-  scroll-snap-points-x: repeat(300px);
   scroll-snap-type: x mandatory;
   margin: auto;
 }
