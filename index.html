@@ -35,10 +35,10 @@
       const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
       images.forEach((image) => {
-        sum += image.width;
         if (sum < scrollPos) {
           scrollmenu.style.width = image.width + "px";
         }
+        sum += image.width;
       });
       document.getElementById("card-info").innerHTML = sum;
       document.getElementById("debug-info").innerHTML = scrollPos;
