@@ -37,7 +37,7 @@
       images.forEach((image) => {
         sum += image.width;
         if (sum < scrollPos) {
-          scrollmenu.style.width = image.width.toString() + "px";
+          scrollmenu.style.width = "50px";
         }
       });
       document.getElementById("card-info").innerHTML = sum;
