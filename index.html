@@ -31,6 +31,8 @@
     //document.getElementById("card").innerHTML = "Test";
     const scrollmenu = document.querySelector(".scrollmenu");
     const images = document.querySelectorAll(".img-responsive");
+    const first_image = document.querySelector(".img-responsive");
+    scrollmenu.style.width = first_image.width + "px";
     scrollmenu.addEventListener("scroll", () => {
       const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
@@ -40,7 +42,6 @@
         }
         sum += image.width;
       });
-      document.getElementById("card-info").innerHTML = sum;
       document.getElementById("debug-info").innerHTML = scrollPos;
     });
     
