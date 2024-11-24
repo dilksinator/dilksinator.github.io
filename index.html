@@ -34,11 +34,11 @@
     scrollmenu.addEventListener("scroll", () => {
       const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
-      scrollMenu.style.width = "300px";
+      scrollmenu.style.width = "300px";
       images.forEach((image) => {
         sum += image.width;
         if (sum < scrollPos) {
-          scrollMenu.style.width = image.width;
+          scrollmenu.style.width = image.width;
         }
       });
       document.getElementById("card-info").innerHTML = sum;
