@@ -32,7 +32,7 @@
     const scrollmenu = document.querySelector(".scrollmenu");
     const images = document.querySelectorAll(".img-responsive");
     scrollmenu.addEventListener("scroll", () => {
-      const scrollPos = scrollmenu.scrollRight;
+      const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
       images.forEach((image) => {
         sum += image.width;
