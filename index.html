@@ -37,7 +37,7 @@
       const scrollPos = scrollmenu.scrollLeft;
       var sum = 0;
       images.forEach((image) => {
-        if (sum < scrollPos) {
+        if (sum < scrollPos + 100) {
           scrollmenu.style.width = image.width + "px";
         }
         sum += image.width;
