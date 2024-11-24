@@ -33,9 +33,9 @@
       const scrollPos = scrollmenu.scrollRight;
       var sum = 0;
       images.forEach((image) => {
-        sum += image.naturalWidth;
+        sum += image.width;
         if (sum < scrollPos) {
-          scrollMenu.style.width = image.naturalWidth;
+          scrollMenu.style.width = image.width;
         }
       });
       document.getElementById("card-info").innerHTML = sum;
