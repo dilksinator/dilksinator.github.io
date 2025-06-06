@@ -4,48 +4,9 @@
   <link rel="stylesheet" href="resources/style.css">
 </head>
 <body>
-  <div class="scrollmenu">
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" onclick="cardInfo();" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />    
-    <input type="image" class="img-responsive" src="resources/high_priestess.jpg" />
-    <input type="image" class="img-responsive" src="resources/empress.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_fool.jpg" />
-    <input type="image" class="img-responsive" src="resources/the_magician.jpg" />
-  </div>
-  <div id="card-info">
-  </div>
-  <div id="debug-info">
-  </div>
+  
 </body>
   <script>
-    //document.getElementById("card").innerHTML = "Test";
-    const scrollmenu = document.querySelector(".scrollmenu");
-    const images = document.querySelectorAll(".img-responsive");
-    scrollmenu.style.width = "289px";
-    scrollmenu.addEventListener("scroll", () => {
-      const scrollPos = scrollmenu.scrollLeft;
-      var sum = 0;
-      images.forEach((image) => {
-        if (sum < scrollPos + 100) {
-          scrollmenu.style.width = image.width + "px";
-        }
-        sum += image.width;
-      });
-      document.getElementById("debug-info").innerHTML = scrollPos;
-    });
     
-    function cardInfo() {
-      document.getElementById("card-info").innerHTML = "Test";
-    }
   </script>
 </html>
