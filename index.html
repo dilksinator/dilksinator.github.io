@@ -18,12 +18,25 @@
     
     buttons.forEach(button => {
       button.addEventListener('mouseenter', () => {
-        content.textContent = button.dataset.message;
+        content.innerHTML = gamesHTML;
       });
     
       button.addEventListener('mouseleave', () => {
         content.textContent = 'Hover over a button to see a message.';
       });
     });
+
+    let gamesHTML = `
+     <div>
+       <h1>Games</h1>
+       <p>Showcase some games.</p>
+     </div>
+   `;
+    let poetryHTML = `
+     <div>
+       <h1>Poetry</h1>
+       <p>This is some poetry.</p>
+     </div>
+   `;
   </script>
 </html>
