@@ -7,6 +7,17 @@
   overflow-x: hidden;
 }
 
+.sidebar a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
 .content {
   margin-left: 210px;
   padding: 20px;
