@@ -6,37 +6,19 @@
 </head>
 <body>
   <div class="sidebar">
-    <button class="hover-btn">About Me</button>
-    <button class="hover-btn">Games</button>
-    <button class="hover-btn">Poetry</button>
+    <button onclick="loadPage('page1.html')">Load Page 1</button>
+    <button onclick="loadPage('page2.html')">Load Page 2</button>
   </div>
   <div class="content" id="content">Hover over a button to see a message.</div>
+  <div id="content">Click a button to load content here.</div>
+
 </body>
   <script>
-    const buttons = document.querySelectorAll('.hover-btn');
-    const content = document.getElementById('content');
-    
-    buttons.forEach(button => {
-      button.addEventListener('mouseenter', () => {
-        content.innerHTML = gamesHTML;
-      });
-    
-      button.addEventListener('mouseleave', () => {
-        content.textContent = 'Hover over a button to see a message.';
-      });
-    });
-
-    let gamesHTML = `
-     <div>
-       <h1>Games</h1>
-       <p>Showcase some games.</p>
-     </div>
-   `;
-    let poetryHTML = `
-     <div>
-       <h1>Poetry</h1>
-       <p>This is some poetry.</p>
-     </div>
-   `;
+    function loadPage(page) {
+        fetch(page)
+            .then(response => response.text())
+            .then(data => document.getElementById('content').innerHTML = data)
+            .catch(error => console.error('Error loading page:', error));
+    }
   </script>
 </html>
