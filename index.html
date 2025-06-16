@@ -3,16 +3,30 @@
 <head>
   <link rel="stylesheet" href="resources/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    const buttons = document.querySelectorAll('.hover-btn');
+    const content = document.getElementById('content');
+    
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        content.textContent = button.dataset.message;
+      });
+    
+      button.addEventListener('mouseleave', () => {
+        content.textContent = 'Hover over a button to see a message.';
+      });
+    });
+  </script
 </head>
 <body>
   <div class="sidebar">
-    <a href="#">Home</a>
-    <a href="#">About Me</a>
-    <a href="#">Poetry</a>
-    <a href="#">Games</a>
+    <a class="hover-btn' href="#">Home</a>
+    <a class="hover-btn' href="#">About Me</a>
+    <a class="hover-btn' href="#">Poetry</a>
+    <a class="hover-btn' href="#">Games</a>
   </div>
   
-  <div class="content">
+  <div id="content">
     <h1>Welcome!</h1>
     <p>This is your main content area.</p>
   </div>
