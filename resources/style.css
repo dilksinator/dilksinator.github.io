@@ -9,6 +9,7 @@
 
 .sidebar button {
   display: block;
+  width: 200px;
   padding: 12px;
   text-decoration: none;
   color: #333;
