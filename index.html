@@ -16,7 +16,12 @@
     document.getElementById('content').innerHTML = joined;
   })
   .catch((e) => console.error(e));
-  const selection = window.getSelection().toString();
-  document.getElementById('selected').innerHTML = selection;
+  
+  document.addEventListener('mouseup', () => {
+  const selectedText = window.getSelection().toString();
+  if (selectedText) {
+    document.getElementById('content').innerHTML = selectedText;
+  }
+});
 </script>
 </html>
