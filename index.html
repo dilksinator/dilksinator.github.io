@@ -3,14 +3,24 @@
 <head>
 </head>
 <body>
-  <div class="content" id="content">Placeholder</div>
-</body>
+  <button id="loadBtn">Load Random Excerpt</button>
+  <div id="output"></div
 <script>
-  fetch("idylls.txt")
-    .then((res) => res.text())
-    .then((text) => {
-      document.getElementById('content').innerHTML = text;
-     })
-    .catch((e) => console.error(e));
+  document.getElementById('loadBtn').addEventListener('click', () => {
+    fetch('idylls.txt') // Replace with your actual file path
+      .then(response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.text();
+      })
+      .then(data => {
+        const lines = data.split(/\r?\n/).filter(line => line.trim() !== '');
+        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+        document.getElementById('output').textContent = randomLine;
+      })
+      .catch(error => {
+        console.error('Error fetching file:', error);
+        document.getElementById('output').textContent = 'Failed to load file.';
+      });
+  });
 </script>
 </html>
