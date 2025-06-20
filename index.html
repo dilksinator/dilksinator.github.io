@@ -9,7 +9,7 @@
   fetch("idylls.txt")
     .then((res) => res.text())
     .then((text) => {
-      document.getElementById('content').innerHTML = data;
+      document.getElementById('content').innerHTML = text;
      })
     .catch((e) => console.error(e));
 </script>
