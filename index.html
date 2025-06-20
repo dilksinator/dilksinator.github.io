@@ -3,20 +3,11 @@
 <head>
 </head>
 <body>
-  <button id="loadBtn">Load Random Excerpt</button>
-  <div id="output"></div
+  <div class="content" id="content">Hover over a button to see a message.</div>
 <script>
-  document.getElementById('loadBtn').addEventListener('click', () => {
-    fetch('idylls.txt')
-      .then(data => {
-        const lines = data.split(/\r?\n/).filter(line => line.trim() !== '');
-        const randomLine = lines[Math.floor(Math.random() * lines.length)];
-        document.getElementById('output').textContent = randomLine;
-      })
-      .catch(error => {
-        console.error('Error fetching file:', error);
-        document.getElementById('output').textContent = 'Failed to load file.';
-      });
-  });
+  fetch("myText.txt")
+  .then((res) => res.text())
+  .then(text => document.getElementById('content').innerHTML = text)
+  .catch((e) => console.error(e));
 </script>
 </html>
