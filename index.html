@@ -18,9 +18,7 @@
   .catch((e) => console.error(e));
   document.addEventListener('mouseup', () => {
   const selectedText = window.getSelection().toString();
-  if (selectedText) {
-    document.getElementById('selected').textContent = selectedText;
-  }
+  document.getElementById('selected').textContent = selectedText;
 });
 </script>
 </html>
