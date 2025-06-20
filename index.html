@@ -16,7 +16,7 @@
     document.getElementById('content').innerHTML = joined;
   })
   .catch((e) => console.error(e));
-  document.addEventListener('mouseup', () => {
+  document.addEventListener('touchend', () => {
   const selectedText = window.getSelection().toString();
   document.getElementById('selected').textContent = selectedText;
 });
