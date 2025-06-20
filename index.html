@@ -4,6 +4,7 @@
 </head>
 <body>
   <div class="content" id="content">Placeholder.</div>
+  <div id="selected">Selected.</div>
 <script>
   fetch("idylls.txt")
   .then((res) => res.text())
@@ -15,5 +16,7 @@
     document.getElementById('content').innerHTML = joined;
   })
   .catch((e) => console.error(e));
+  const selection = window.getSelection().toString();
+  document.getElementById('selected').innerHTML = selection;
 </script>
 </html>
