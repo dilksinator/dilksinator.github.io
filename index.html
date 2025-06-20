@@ -11,6 +11,7 @@
     const lines = text.split('\n');
     const i = Math.floor(Math.random() * lines.length);
     const sliced = lines.slice(i, i + 10);
+    const joined = sliced.join('\n');
     document.getElementById('content').textContent = sliced;
   })
   .catch((e) => console.error(e));
