@@ -3,13 +3,13 @@
 <head>
 </head>
 <body>
-  
+  <div class="content" id="content">Placeholder</div>
 </body>
 <script>
-  fetch("myText.txt")
+  fetch("idylls.txt")
     .then((res) => res.text())
     .then((text) => {
-      // do something with "text"
+      document.getElementById('content').innerHTML = data;
      })
     .catch((e) => console.error(e));
 </script>
