@@ -9,8 +9,9 @@
   .then((res) => res.text())
   .then(text => {
     const lines = text.split('\n');
-    const randomLine = lines[Math.floor(Math.random() * lines.length)];
-    document.getElementById('content').textContent = randomLine;
+    const i = Math.floor(Math.random() * lines.length);
+    const sliced = lines.slice(i, i + 10);
+    document.getElementById('content').textContent = sliced;
   })
   .catch((e) => console.error(e));
 </script>
