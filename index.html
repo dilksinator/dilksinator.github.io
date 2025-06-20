@@ -7,11 +7,7 @@
   <div id="output"></div
 <script>
   document.getElementById('loadBtn').addEventListener('click', () => {
-    fetch('idylls.txt') // Replace with your actual file path
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.text();
-      })
+    fetch('idylls.txt')
       .then(data => {
         const lines = data.split(/\r?\n/).filter(line => line.trim() !== '');
         const randomLine = lines[Math.floor(Math.random() * lines.length)];
