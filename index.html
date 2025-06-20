@@ -12,7 +12,7 @@
     const i = Math.floor(Math.random() * lines.length);
     const sliced = lines.slice(i, i + 10);
     const joined = sliced.join('\n');
-    document.getElementById('content').textContent = sliced;
+    document.getElementById('content').textContent = joined;
   })
   .catch((e) => console.error(e));
 </script>
