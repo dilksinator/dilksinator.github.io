@@ -7,7 +7,11 @@
 <script>
   fetch("idylls.txt")
   .then((res) => res.text())
-  .then(text => document.getElementById('content').innerHTML = text)
+  .then(text => {
+    const lines = text.split('\n');
+    const randomLine = lines[Math.floor(Math.random() * lines.length)];
+    document.getElementById('content').textContent = randomLine;
+  }
   .catch((e) => console.error(e));
 </script>
 </html>
