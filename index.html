@@ -25,20 +25,4 @@ function copy() {
   snippets.push(selectedText);
   document.getElementById('selected').innerHTML = snippets.join("\n");
 }
-function next() {
-  fetch("idylls.txt")
-  .then((res) => res.text())
-  .then(text => {
-    const lines = text.split('\n');
-    const i = Math.floor(Math.random() * lines.length);
-    const sliced = lines.slice(i, i + 10);
-    const joined = sliced.join('<br>');
-    document.getElementById('content').innerHTML = joined;
-  })
-  .catch((e) => console.error(e));
-  document.addEventListener('touchend', () => {
-  selectedText = window.getSelection().toString();
-}
-</script>
-</body>
 </html>
