@@ -9,7 +9,13 @@
 <script>
   let snippets = []; 
   var selectedText = "";
-  
+  next();
+});
+function copy() {
+  snippets.push(selectedText);
+  document.getElementById('selected').innerHTML = snippets.join("\n");
+}
+function next() {
   fetch("idylls.txt")
   .then((res) => res.text())
   .then(text => {
@@ -22,13 +28,6 @@
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
   selectedText = window.getSelection().toString();
-});
-function copy() {
-  snippets.push(selectedText);
-  document.getElementById('selected').innerHTML = snippets.join("\n");
-}
-function next() {
-  
 }
 </script>
 </html>
