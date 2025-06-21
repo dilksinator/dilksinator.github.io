@@ -21,8 +21,11 @@
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
   selectedText = window.getSelection().toString();
-function copy() {
-  snippets.push(selectedText);
-  document.getElementById('selected').innerHTML = snippets.join("\n");
-}
+  
+  function copy() {
+    snippets.push(selectedText);
+    document.getElementById('selected').innerHTML = snippets.join("\n");
+  }
+    </script>
+</body>
 </html>
