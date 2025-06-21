@@ -4,8 +4,8 @@
 </head>
 <body>
   <div class="content" id="content">Placeholder.</div>
-  <div id="selected">Selected.</div>
   <button onclick="copy();">Copy</button>
+  <button onclick="next();">Next</button>
 <script>
   let snippets = []; 
   var selectedText = "";
@@ -26,6 +26,9 @@
 function copy() {
   snippets.push(selectedText);
   document.getElementById('selected').innerHTML = snippets.join("\n");
+}
+function next() {
+  
 }
 </script>
 </html>
