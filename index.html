@@ -4,12 +4,11 @@
 </head>
 <body>
   <div class="content" id="content">Placeholder.</div>
+  <div id="selected">Selected.</div>
   <button onclick="copy();">Copy</button>
-  <button onclick="next();">Next</button>
 <script>
-  document.getElementById('content').innerHTML = "Test";
   let snippets = []; 
-  var selectedText = "";
+  
   fetch("idylls.txt")
   .then((res) => res.text())
   .then(text => {
@@ -17,16 +16,16 @@
     const i = Math.floor(Math.random() * lines.length);
     const sliced = lines.slice(i, i + 10);
     const joined = sliced.join('<br>');
-    
+    document.getElementById('content').innerHTML = joined;
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  selectedText = window.getSelection().toString();
-  
-  function copy() {
-    snippets.push(selectedText);
-    document.getElementById('selected').innerHTML = snippets.join("\n");
-  }
-    </script>
+  const selectedText = window.getSelection().toString();
+  document.getElementById('selected').textContent = snippets.join();
+});
+function copy() {
+  snippets.push(selectedText);
+}
+</script>
 </body>
 </html>
