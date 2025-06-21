@@ -21,7 +21,7 @@
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  document.getElementById('selected').textContent = snippets.join();
+  document.getElementById('selected').innerHTML = snippets.join('<br>');
 });
 function copy() {
   const selectedText = window.getSelection().toString();
@@ -39,7 +39,7 @@ function next() {
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  document.getElementById('selected').textContent = snippets.join();
+  document.getElementById('selected').innerHTML = snippets.join('<br>');
 });
 }
 </script>
