@@ -8,6 +8,7 @@
   <button onclick="copy();">Copy</button>
 <script>
   let snippets = []; 
+  var selectedText = "";
   
   fetch("idylls.txt")
   .then((res) => res.text())
@@ -20,7 +21,7 @@
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  const selectedText = window.getSelection().toString();
+  selectedText = window.getSelection().toString();
   document.getElementById('selected').textContent = snippets.join();
 });
 function copy() {
