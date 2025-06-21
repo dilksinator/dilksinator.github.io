@@ -7,6 +7,7 @@
   <button onclick="copy();">Copy</button>
   <button onclick="next();">Next</button>
 <script>
+  document.getElementById('content').innerHTML = "Test";
   let snippets = []; 
   var selectedText = "";
   fetch("idylls.txt")
@@ -16,7 +17,7 @@
     const i = Math.floor(Math.random() * lines.length);
     const sliced = lines.slice(i, i + 10);
     const joined = sliced.join('<br>');
-    document.getElementById('content').innerHTML = joined;
+    
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
