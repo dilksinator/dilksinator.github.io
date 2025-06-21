@@ -22,10 +22,10 @@
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
   selectedText = window.getSelection().toString();
-  document.getElementById('selected').textContent = snippets.join();
 });
 function copy() {
   snippets.push(selectedText);
+  document.getElementById('selected').textContent = snippets.join("\n");
 }
 </script>
 </html>
