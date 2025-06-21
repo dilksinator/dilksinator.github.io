@@ -15,7 +15,7 @@
   .then(text => {
     const lines = text.split('\n');
     const i = Math.floor(Math.random() * lines.length);
-    const sliced = lines.slice(i, i + 10);
+    const sliced = lines.slice(i, i + 20);
     const joined = sliced.join('<br>');
     document.getElementById('content').innerHTML = joined;
   })
@@ -38,7 +38,9 @@ function next() {
     document.getElementById('content').innerHTML = joined;
   })
   .catch((e) => console.error(e));
-
+  document.addEventListener('touchend', () => {
+  const selectedText = window.getSelection().toString();
+  document.getElementById('selected').textContent = snippets.join();
 }
 </script>
 </body>
