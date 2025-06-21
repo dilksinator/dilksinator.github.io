@@ -21,7 +21,6 @@
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  const selectedText = window.getSelection().toString();
   document.getElementById('selected').textContent = snippets.join();
 });
 function copy() {
@@ -40,7 +39,6 @@ function next() {
   })
   .catch((e) => console.error(e));
   document.addEventListener('touchend', () => {
-  const selectedText = window.getSelection().toString();
   document.getElementById('selected').textContent = snippets.join();
 });
 }
