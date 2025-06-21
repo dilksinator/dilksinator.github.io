@@ -6,6 +6,7 @@
   <div class="content" id="content">Placeholder.</div>
   <div id="selected">Selected.</div>
   <button onclick="copy();">Copy</button>
+  <button onclick="next();">Next</button>
 <script>
   let snippets = []; 
   
@@ -25,6 +26,19 @@
 });
 function copy() {
   snippets.push(selectedText);
+}
+function next() {
+  fetch("idylls.txt")
+  .then((res) => res.text())
+  .then(text => {
+    const lines = text.split('\n');
+    const i = Math.floor(Math.random() * lines.length);
+    const sliced = lines.slice(i, i + 10);
+    const joined = sliced.join('<br>');
+    document.getElementById('content').innerHTML = joined;
+  })
+  .catch((e) => console.error(e));
+
 }
 </script>
 </body>
